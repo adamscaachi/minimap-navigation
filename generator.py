@@ -38,7 +38,7 @@ class Generator:
 
     def _add_monsters(self, image):
         monster_height, monster_width = self.monster.shape[:2]
-        if np.random.randint(5) == 0:
+        if random.randint(0, 4) == 0:
             x = random.randint(0, image.shape[0] - monster_width)
             y = random.randint(0, image.shape[1] - monster_height)
             for i in range(monster_height):
