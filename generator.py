@@ -13,7 +13,7 @@ class Generator:
 
     def _split_field(self, size):
         backgrounds = []
-        for i in range(size):
+        for _ in range(size):
             x = random.randint(0, self.field.shape[0] - 32)
             y = random.randint(0, self.field.shape[1] - 32)
             texture = self.field[x:x+32, y:y+32]
@@ -81,7 +81,7 @@ class Generator:
     def generate_dataset(self, size):
         images = []
         angles = []
-        for i in range(size):
+        for _ in range(size):
             angle = random.randint(0, 359)
             angles.append(angle)
             image = self.generate_image(angle)

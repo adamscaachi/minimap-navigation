@@ -37,7 +37,7 @@ class Evaluator:
         errors = []
         for target in targets:
             angles = []
-            for i in range(num_samples):
+            for _ in range(num_samples):
                 image = (self.generator.generate_image(target)[:, :, :3].astype(np.float32) / 255.0).transpose(2, 0, 1)
                 angles.append(self.predict_angle(image))
             mean_angle = np.mean(angles)
