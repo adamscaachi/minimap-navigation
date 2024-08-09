@@ -31,6 +31,7 @@ def eval_model(file_name, field, num_images):
     evaluator.test_all_angles()
     evaluator.test_randomly_generated_images(num_images)
     evaluator.create_gif()
+    evaluator.RMSE()
 
 if __name__ == "__main__":
     mode = input("Do you want to train (type 'train') or evaluate (type 'eval') a model? ")

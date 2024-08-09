@@ -49,7 +49,16 @@ class Evaluator:
         plt.xlabel('Vision Cone Angle (°)')
         plt.ylabel(r'$atan2(\beta, \alpha)$')
         plt.savefig('test_all_angles.png', dpi=400, bbox_inches='tight')
-        plt.clf()         
+        plt.clf()    
+
+    def RMSE(self):
+        targets = np.linspace(10, 350, 10000)
+        predictions = []
+        for target in targets:
+            image = (self.generator.generate_image(target)[:, :, :3].astype(np.float32) / 255.0).transpose(2, 0, 1)
+            predictions.append(self.predict_angle(image))
+        rmse = np.sqrt(np.mean((targets - predictions)**2))
+        print(rmse)
 
     def test_randomly_generated_images(self, num_images):
         for i in range(num_images):
