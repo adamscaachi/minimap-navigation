@@ -1,4 +1,4 @@
-# minimap-navigation
+# Map Object Orientation
 
 Many video game genres utilise UI elements known as minimaps to provide the player with an overview of their surroundings. A typical minimap consists of an arrowhead to convey the location and direction of the player's character, circular icons to represent the locations of enemy monsters, and a translucent triangle (known as a vision cone) to indicate the direction of the player's camera. Attempting to extract the player's camera direction from the minimap using classical computer vision approaches can be unreliable due to the constantly changing background, therefore a supervised machine learning approach is used instead.
 
