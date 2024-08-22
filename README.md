@@ -14,6 +14,8 @@ A CNN architecture is used to process the minimap images and the output is flatt
 
 The model was trained for 30 epochs and used to predict values for the vision cone angle on a test dataset consisting of images generated using a different world map to the one used for generating the training data. The root mean square error of the predictions computed over the test dataset was found to be 3.7°. 
 
+## Demonstration
+
 A demonstration of the model on a random sample of images from the test dataset is shown below.
 
 <p align="center">
